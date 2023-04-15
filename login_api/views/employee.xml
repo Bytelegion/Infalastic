@@ -1,0 +1,17 @@
+<odoo>
+    
+    <record id="hr_employee_inherit" model="ir.ui.view">
+        <field name="name">hr_employee_inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='address_home_id']" position="after">
+                <field name="first_name" invisible="0"/>
+                <field name="last_name" invisible="0"/>
+                <field name="image_url" invisible="0"/>
+                <field name="employee_status" invisible="0"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
